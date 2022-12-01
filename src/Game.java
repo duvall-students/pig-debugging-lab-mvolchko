@@ -69,6 +69,11 @@ public class Game {
 				whoseTurn.resetScore();
 				return 0;
 			}
+			if (spin.equalsIgnoreCase(LOSER_SPIN) && roll == LOSER_ROLL) {
+				System.out.println("Lose all your points and a turn");
+				whoseTurn.resetScore();
+				return 0;
+			}
 			if (!spin.equalsIgnoreCase(LOSER_SPIN) && roll != LOSER_ROLL){
 				roundScore = roundScore + roll;
 				System.out.println("Round total is currently: "+roundScore);
