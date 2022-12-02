@@ -4,6 +4,8 @@ public class ComputerPlayer extends Player{
 	
 	public ComputerPlayer(){
 		super("R2D2");
+		myName="R2D2";
+		//#5 for when the name is called again, it will be set to this
 	}
 
 	@Override

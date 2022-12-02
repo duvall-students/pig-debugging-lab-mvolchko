@@ -1,10 +1,13 @@
 import java.util.Random;
 
 public class Spinner {
-	private String[] sections = {"Oink", "Squeal", "Snort", "GRUNT"};
+	//private String[] sections = {"Oink", "Squeal", "Snort", "GRUNT"};
 	// This means that "oink" should happen 20% of the time, "Squeal" 50%, etc...
 	// I am assuming the probabilities add to 1.
-	private double[] probabilities = {.2, .5, .27, .03};
+	//private double[] probabilities = {.2, .5, .27, .03};
+	//#2 these need to go in order to be able to find the probabilites between these values instead of jumping everywhere
+	private String[] sections= {"GRUNT","Oink","Snort","Squeal"};
+	private double[] probabilities= {.03,.2,.27,.5};
 	private Random spinRandom;
 	
 	public Spinner(){
@@ -21,7 +24,8 @@ public class Spinner {
 	 * based on the given probabilities.
 	 */
 	public String numToWord(double spinNumber){	
-		int index = 1;
+		//#2 index should start at 0
+		int index = 0;
 		double low = 0;
 		boolean done = false;
 		String result = "";
